@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: product-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: x.orders-in
+        input:
+          destination: x.orders-out
+      rabbit:
+        bindings:
+          output:
+            producer:
+              exchangeType: fanout
+          input:
+            consumer:
+              exchangeType: fanout

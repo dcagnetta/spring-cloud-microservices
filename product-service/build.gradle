@@ -1,4 +1,6 @@
 dependencies {
+	implementation project(':messages')
+
 	implementation 'org.springframework.cloud:spring-cloud-stream'
 	implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
